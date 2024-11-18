@@ -1,19 +1,16 @@
-// src/App.jsx
-import React, { useState } from "react";
-import Header from "./components/Header/Header";
-import Loader from "./components/Loader/Loader";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Main from './components/Main/Main';
+import LoginPage from './pages/LoginPage/LoginPage';
 
-function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [loading, setLoading] = useState(false);
-
+const App = () => {
   return (
-    <>
-      <Header isAuthenticated={isAuthenticated} />
-      {loading && <Loader />}
-      {/* Other components and routes */}
-    </>
+
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+
   );
-}
+};
 
 export default App;
