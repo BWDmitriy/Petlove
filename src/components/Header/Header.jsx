@@ -1,9 +1,9 @@
 // src/components/Header.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "./Nav";
-import AuthNav from "./AuthNav";
-import UserNav from "./UserNav";
+import Nav from "../Nav/Nav";
+import AuthNav from "../AuthNav/AuthNav";
+import UserNav from "../UserNav/UserNav";
 
 const Header = ({ isAuthenticated }) => {
   return (

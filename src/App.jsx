@@ -1,7 +1,7 @@
 // src/App.jsx
 import React, { useState } from "react";
-import Header from "./components/Header";
-import Loader from "./components/Loader";
+import Header from "./components/Header/Header";
+import Loader from "./components/Loader/Loader";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
