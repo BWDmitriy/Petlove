@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  border-radius: 30px;
+  padding: 12px 67px;
+  width: 178px;
+  height: 42px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:first-child {
+  background-color: #f6b83d;
+}
+
+nav a:last-child {
+  background-color: #fff4df;
+}

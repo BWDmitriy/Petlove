@@ -1,18 +1,24 @@
-// src/components/Header.jsx
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Nav from "../Nav/Nav";
-import AuthNav from "../AuthNav/AuthNav";
-import UserNav from "../UserNav/UserNav";
+import styles from "./Header.module.css"; // Import the CSS module
+import Menu from "../Menu/Menu"; // Import the Menu component
 
 const Header = ({ isAuthenticated }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
-    <header>
-      <Link to="/" className="logo">
-        <img src="/path/to/logo.svg" alt="Logo" />
+    <header className={styles.header}>
+      <Link to="/" className={styles.logo}>
+        <img src="/src/assets/logo.svg" alt="Logo" />
       </Link>
-      <Nav />
-      {isAuthenticated ? <UserNav /> : <AuthNav />}
+      <svg className={styles.burgerIcon} onClick={toggleMenu}>
+        <use xlinkHref="/src/assets/icons.svg#icon-menu" />
+      </svg>
+      {menuOpen && <Menu isAuthenticated={isAuthenticated} />}
     </header>
   );
 };
