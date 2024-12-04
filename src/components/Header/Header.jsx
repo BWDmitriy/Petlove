@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css"; // Import the CSS module
 import Menu from "../Menu/Menu"; // Import the Menu component
+import sprite from "../../assets/icons.svg";
 
 const Header = ({ isAuthenticated }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,11 +13,11 @@ const Header = ({ isAuthenticated }) => {
 
   return (
     <header className={styles.header}>
-      <Link to="/" className={styles.logo}>
-        <img src="/src/assets/logo.svg" alt="Logo" />
+      <Link to="/">
+        <img src="/src/assets/logo-black.svg" alt="Logo" />
       </Link>
       <svg className={styles.burgerIcon} onClick={toggleMenu}>
-        <use xlinkHref="/src/assets/icons.svg#icon-menu" />
+        <use xlinkHref={`${sprite}#icon-menu`} />
       </svg>
       {menuOpen && <Menu isAuthenticated={isAuthenticated} />}
     </header>

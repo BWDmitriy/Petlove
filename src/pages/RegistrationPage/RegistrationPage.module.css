@@ -1,13 +1,21 @@
+.registrationPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
 .background {
-  background-image: url('/src/assets/login-dog-mob.png');
-  background-size: cover;
-  background-position: center;
-  border: 1px solid #000;
-border-radius: 30px;
-width: 335px;
-height: 280px;
-margin-left: auto;
-margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
 .formContainer {
@@ -16,7 +24,6 @@ margin-right: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 320px;
 }
 
 .title {
@@ -29,43 +36,26 @@ margin-right: auto;
   margin-bottom: 10px;
 }
 
-.welcomeText {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
-  letter-spacing: -0.02em;
-  color: #262626;
-  margin-bottom: 20px;
-}
-
 .input {
   border: 1px solid rgba(38, 38, 38, 0.15);
   border-radius: 30px;
-     padding: 12px;
-    width: 320px;
-    height: 42px;
+  padding: 12px;
+  width: 295px;
+  height: 42px;
   margin-bottom: 10px;
 }
 
-.passwordContainer {
-  position: relative;
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
-.eyeIcon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 18px;
-}
-
-.loginButton {
+.registrationButton {
   border-radius: 30px;
   padding: 12px 126px;
-  /* width: 295px;
-  height: 42px; */
+  width: 295px;
+  height: 42px;
   background-color: #f6b83d;
   color: white;
   font-weight: 700;
@@ -74,7 +64,7 @@ margin-right: auto;
   margin-top: 10px;
 }
 
-.registerText {
+.loginText {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 12px;
@@ -84,7 +74,7 @@ margin-right: auto;
   margin-top: 20px;
 }
 
-.registerLink {
+.loginLink {
   font-weight: 700;
   text-decoration: underline;
   text-decoration-skip-ink: none;

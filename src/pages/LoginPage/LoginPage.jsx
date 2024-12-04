@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header"; // Make sure to import your Header component
 import styles from "./LoginPage.module.css"; // Import the CSS module
-
+import { Link } from "react-router-dom";
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,7 +35,10 @@ const LoginPage = () => {
         </div>
         <button className={styles.loginButton}>LOG IN</button>
         <p className={styles.registerText}>
-          Don't have an account? <a className={styles.registerLink}>Register</a>
+          Don't have an account?{" "}
+          <Link className={styles.registerLink} to="/register">
+            Register
+          </Link>
         </p>
       </div>
     </div>
