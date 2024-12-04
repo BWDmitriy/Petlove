@@ -1,6 +1,6 @@
 // pages/HomePage.jsx
 import React from "react";
-import Title from "../components/Title";
+import Title from "../../components/Title/Title";
 import styles from "./HomePage.module.css";
 
 const HomePage = () => {

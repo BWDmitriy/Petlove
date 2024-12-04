@@ -1,8 +1,7 @@
 // App.jsx
-import React from "react";
+import Main from "./components/Main/Main";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-// import NewsPage from "./pages/NewsPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import NoticesPage from "./pages/NoticesPage/NoticesPage";
 import FriendsPage from "./pages/FriendsPage/FriendsPage";
@@ -14,6 +13,7 @@ import AddPetPage from "./pages/AddPetPage/AddPetPage";
 const App = () => {
   return (
     <Routes>
+      <Route path="/" element={<Main />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/news" element={<NewsPage />} />
       <Route path="/notices" element={<NoticesPage />} />

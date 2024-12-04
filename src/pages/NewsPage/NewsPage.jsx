@@ -1,10 +1,10 @@
 // pages/NewsPage.jsx
 import React, { useState, useEffect } from "react";
-import Title from "../components/Title";
-import SearchField from "../components/SearchField";
-import NewsList from "../components/NewsList";
-import Pagination from "../components/Pagination";
+import SearchField from "../../components/SearchField/SearchField";
+import NewsList from "../../components/NewsList/NewsList";
+import Pagination from "../../components/Pagination/Pagination";
 import styles from "./NewsPage.module.css";
+import Title from "../../components/Title/Title";
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
